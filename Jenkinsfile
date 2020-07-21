@@ -5,14 +5,21 @@ pipeline {
             label 'test-agent'
         }
     }
+
+    environment {
+        DISABLE_AUTH  = 'true'
+        DB_ENGINE     = 'sqlite'
+    }
+
     stages {
         stage('build') {
             steps {
-               sh './flakey-deploy.sh'
-               sh 'echo "Welcome to the jungle!"'
+               sh './flakey-deploy.sh ${DB_ENGINE}'
+               sh 'echo "Welcome to the jungle!"  DISABLE_AUTH is ${DISABLE_AUTH}'
             }
         }
     }
+
     post {
         always {
             echo 'This will always run'
