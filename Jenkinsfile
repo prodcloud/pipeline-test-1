@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                timeout(time: 3, unit: 'MINUTES') {
+                timeout(time: 5, unit: 'SECONDS') {
                     retry(5) {
                         sh './flakey-deploy.sh'
                     }
