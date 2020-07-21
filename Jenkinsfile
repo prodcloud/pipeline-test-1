@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-               sh 'echo "Success!"'
+               sh './flakey-deploy.sh'
                sh 'echo "Welcome to the jungle!"'
             }
         }

@@ -1,4 +1,3 @@
 #!/bin/sh
 
-sleep 60
-echo "Success!"
+echo "This is the best! Much Success!"
