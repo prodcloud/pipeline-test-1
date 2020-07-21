@@ -9,6 +9,7 @@ pipeline {
         stage('build') {
             steps {
                sh 'echo "Success!"'
+               sh 'echo "Welcome to the jungle!"'
             }
         }
     }
