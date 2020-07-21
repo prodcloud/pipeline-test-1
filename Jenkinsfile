@@ -1,5 +1,10 @@
 pipeline {
-    agent { docker { image 'alpine:latest' } }
+    agent {
+        docker {
+            image 'alpine:latest'
+            label 'test-agent'
+        }
+    }
     stages {
         stage('build') {
             steps {
