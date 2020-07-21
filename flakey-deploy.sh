@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo "Fail!"; exit 1
+echo "Success!"
