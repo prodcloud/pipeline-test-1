@@ -32,6 +32,7 @@ pipeline {
         }
         unstable {
             echo 'I am unstable :/'
+        }
         failure {
             echo 'I failed :('
             mail to: 'haplo+jenkins@hazmac.net',
