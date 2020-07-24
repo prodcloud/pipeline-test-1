@@ -3,6 +3,7 @@ pipeline {
         docker {
             image 'alpine:latest'
             label 'test-agent'
+            args '-u 0'
         }
     }
 
