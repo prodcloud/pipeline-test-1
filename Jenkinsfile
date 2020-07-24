@@ -15,8 +15,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-               echo "Database engine: ${DB_ENGINE}
-               echo "DISABLE_AUTH is ${DISABLE_AUTH}
+               echo "Database engine: ${DB_ENGINE}"
+               echo "DISABLE_AUTH is ${DISABLE_AUTH}"
                sh 'printenv'
             }
         }
