@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'alpine:latest'
-            label 'test-agent'
+            label '!windows'
             args '-u 0'
         }
     }
@@ -15,10 +15,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-               sh 'apk update'
-               sh 'apk add curl'
-               sh './flakey-deploy.sh ${DB_ENGINE}'
-               sh 'echo "Welcome to the jungle!"  DISABLE_AUTH is ${DISABLE_AUTH}'
+               echo "Database engine: ${DB_ENGINE}"
+               echo "DISABLE_AUTH is ${DISABLE_AUTH}"
+               sh 'printenv'
             }
         }
     }
