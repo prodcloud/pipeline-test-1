@@ -34,9 +34,7 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
-            mail to: 'haplo@hazmac.net',
-                subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                body: "Something is wrong with ${env.BUILD_URL}"
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subjetc: 'Test'
         }
         changed {
             echo 'Things were different before...'
