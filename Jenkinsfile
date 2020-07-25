@@ -34,7 +34,7 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
-            mail to: 'haplos@hazmac.net',
+            mail to: 'haplo@hazmac.net',
                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
                 body: "Something is wrong with ${env.BUILD_URL}"
         }
