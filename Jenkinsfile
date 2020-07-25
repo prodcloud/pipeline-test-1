@@ -34,7 +34,7 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subjetc: 'Test'
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
         changed {
             echo 'Things were different before...'
