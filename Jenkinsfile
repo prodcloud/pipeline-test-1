@@ -8,8 +8,8 @@ pipeline {
     }
 
     environment {
-        DISABLE_AUTH  = 'true'
-        DB_ENGINE     = 'sqlite'
+        DISABLE_AUTH  = 'false'
+        DB_ENGINE     = 'mysql'
     }
 
     stages {
